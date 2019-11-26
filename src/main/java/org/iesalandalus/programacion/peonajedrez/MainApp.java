@@ -35,6 +35,10 @@ public class MainApp {
 
 	}
 
+	private static void crearPeonDefecto() {
+		peon = new Peon();
+	}
+
 	private static Color elegirColor() {
 		Color color = null;
 		int menuColor;
