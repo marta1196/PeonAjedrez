@@ -22,6 +22,7 @@ public class Peon {
 			setPosicion(new Posicion(7, 'd'));
 		}
 	}
+
 	public Peon(Color color, char columna) {
 
 		setColor(color);
@@ -137,7 +138,6 @@ public class Peon {
 
 	}
 
-
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
@@ -145,7 +145,6 @@ public class Peon {
 		result = prime * result + ((posicion == null) ? 0 : posicion.hashCode());
 		return result;
 	}
-
 
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -165,5 +164,8 @@ public class Peon {
 		return true;
 	}
 
+	public String toString() {
+		return "fila=" + posicion.getFila() + ", columna=" + posicion.getColumna() + ", color=" + color;
+	}
 
 }
