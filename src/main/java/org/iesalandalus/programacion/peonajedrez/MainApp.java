@@ -35,4 +35,25 @@ public class MainApp {
 
 	}
 
+	private static Color elegirColor() {
+		Color color = null;
+		int menuColor;
+
+		do {
+			System.out.println("Introduzca un número para elegir color del peón: 1.blanco, 2.negro");
+			menuColor = Entrada.entero();
+
+		} while (menuColor < 1 || menuColor > 2);
+
+		switch (menuColor) {
+
+		case 1:
+			return Color.BLANCO;
+		case 2:
+			return Color.NEGRO;
+		}
+
+		return null;
+	}
+
 }
