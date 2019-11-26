@@ -68,4 +68,12 @@ public class MainApp {
 		return columna;
 
 	}
+
+	private static void mostrarMenuMovimientos() {
+		System.out.println("Introduca un opción para el movimiento del peón: ");
+		System.out.println("1.avanzar peón un paso");
+		System.out.println("2.avanzar peón dos pasos");
+		System.out.println("3.avanzar peón hacia la izquierda ");
+		System.out.println("4.avanzar peón hacia la derecha");
+	}
 }
