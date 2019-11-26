@@ -85,4 +85,37 @@ public class MainApp {
 
 		return menu;
 	}
+
+	private static void realizarMovimiento(int opcionMovimiento) {
+
+		try {
+			switch (opcionMovimiento) {
+			case 1:
+
+				peon.mover(1);
+				break;
+
+			case 2:
+
+				peon.mover(2);
+				break;
+
+			case 3:
+
+				peon.mover(Direccion.IZQUIERDA);
+				break;
+
+			case 4:
+
+				peon.mover(Direccion.DERECHA);
+
+				break;
+
+			default:
+				break;
+			}
+		} catch (OperationNotSupportedException e) {
+			System.out.println(e.getMessage());
+		}
+	}
 }
