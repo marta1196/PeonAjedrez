@@ -64,6 +64,10 @@ public class MainApp {
 		return null;
 	}
 
+	private static void crearPeonColorColumna() {
+		peon = new Peon(elegirColor(), elegirColumnaInicial());
+	}
+
 	private static char elegirColumnaInicial() {
 		char columna;
 
