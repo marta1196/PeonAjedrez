@@ -76,4 +76,13 @@ public class MainApp {
 		System.out.println("3.avanzar peón hacia la izquierda ");
 		System.out.println("4.avanzar peón hacia la derecha");
 	}
+
+	private static int elegirMovimiento() {
+		int menu;
+		do {
+			menu = Entrada.entero();
+		} while (menu < 1 || menu > 4);
+
+		return menu;
+	}
 }
