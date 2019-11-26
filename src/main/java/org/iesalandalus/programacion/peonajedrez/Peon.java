@@ -7,6 +7,12 @@ public class Peon {
 	private Color color;
 	private Posicion posicion;
 
+	public Peon() {
+
+		setColor(Color.NEGRO);
+		setPosicion(new Posicion(7, 'd'));
+	}
+
 	public Color getColor() {
 		return color;
 	}
@@ -26,5 +32,7 @@ public class Peon {
 	private void setPosicion(Posicion posicion) {
 		this.posicion = posicion;
 	}
+
+
 
 }
