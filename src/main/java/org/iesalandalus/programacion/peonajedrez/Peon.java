@@ -60,6 +60,47 @@ public class Peon {
 		this.posicion = posicion;
 	}
 
+	public void mover(int paso) throws OperationNotSupportedException {
+		if (paso != 1 && paso != 2) {
+			throw new OperationNotSupportedException("ERROR: El peón sólo se puede mover 1 o 2 pasos.");
+		} else {
+
+			switch (paso) {
+
+			case 1:
+
+				try {
+
+					if (color.equals(Color.BLANCO))
+						posicion = new Posicion(posicion.getFila() + 1, (char) (posicion.getColumna()));
+
+					if (color.equals(Color.NEGRO))
+						posicion = new Posicion(posicion.getFila() - 1, (char) (posicion.getColumna()));
+
+				} catch (IllegalArgumentException e) {
+					throw new OperationNotSupportedException("ERROR: Movimiento no válido.");
+				}
+				break;
+
+			case 2:
+				if (posicion.getFila() != 2 && posicion.getFila() != 7) {
+					throw new OperationNotSupportedException(
+							"ERROR: El peón sólo se puede mover 2 pasos cuando se encuentra en la casilla inicial.");
+				} else {
+
+					if (color.equals(Color.BLANCO) && posicion.getFila() == 2)
+						posicion = new Posicion(posicion.getFila() + 2, (char) (posicion.getColumna()));
+
+					if (color.equals(Color.NEGRO) && posicion.getFila() == 7)
+						posicion = new Posicion(posicion.getFila() - 2, (char) (posicion.getColumna()));
+
+				}
+				break;
+			}
+		}
+
+	}
+
 	public void mover(Direccion direccion) throws OperationNotSupportedException {
 
 		if (direccion == null)
