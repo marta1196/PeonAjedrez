@@ -9,6 +9,13 @@ public class MainApp {
 	private static Peon peon;
 
 	public static void main(String[] args) {
+		int numero = 0;
+
+		do {
+			mostrarMenu();
+			ejecutarOpcion(elegirOpcion());
+			System.out.println("\n");
+		} while (numero < 1 || numero > 5);
 
 	}
 
