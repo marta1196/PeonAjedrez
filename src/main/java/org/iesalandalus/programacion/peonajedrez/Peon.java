@@ -22,6 +22,23 @@ public class Peon {
 			setPosicion(new Posicion(7, 'd'));
 		}
 	}
+	public Peon(Color color, char columna) {
+
+		setColor(color);
+
+		if (columna != 'd') {
+
+			if (color.equals(Color.BLANCO)) {
+				setPosicion(new Posicion(2, columna));
+			}
+			if (color.equals(Color.NEGRO)) {
+				setPosicion(new Posicion(7, columna));
+			}
+		} else {
+			throw new IllegalArgumentException("ERROR: Columna no válida.");
+		}
+
+	}
 
 	public Color getColor() {
 		return color;
