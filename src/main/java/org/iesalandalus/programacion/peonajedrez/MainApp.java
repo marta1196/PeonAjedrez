@@ -81,6 +81,13 @@ public class MainApp {
 
 	}
 
+	private static void mover() {
+		mostrarMenuMovimientos();
+		realizarMovimiento(elegirMovimiento());
+
+	}
+
+
 	private static void mostrarMenuMovimientos() {
 		System.out.println("Introduca un opción para el movimiento del peón: ");
 		System.out.println("1.avanzar peón un paso");
