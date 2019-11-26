@@ -35,6 +35,42 @@ public class MainApp {
 
 	}
 
+	private static void ejecutarOpcion(int opcion) {
+
+		switch (opcion) {
+		case 1:
+
+			crearPeonDefecto();
+			mostrarPeon();
+			break;
+
+		case 2:
+
+			crearPeonColor();
+			mostrarPeon();
+			break;
+
+		case 3:
+
+			crearPeonColorColumna();
+			mostrarPeon();
+			break;
+
+		case 4:
+
+			mover();
+			mostrarPeon();
+			break;
+
+		case 5:
+
+			System.out.println("Hasta luego Lucas!!!!");
+			break;
+		default:
+			break;
+		}
+	}
+
 	private static void crearPeonDefecto() {
 		peon = new Peon();
 	}
@@ -86,7 +122,6 @@ public class MainApp {
 		realizarMovimiento(elegirMovimiento());
 
 	}
-
 
 	private static void mostrarMenuMovimientos() {
 		System.out.println("Introduca un opción para el movimiento del peón: ");
