@@ -25,4 +25,14 @@ public class MainApp {
 		System.out.println("5.salir");
 	}
 
+	private static int elegirOpcion() {
+		int menu;
+		do {
+			menu = Entrada.entero();
+		} while (menu < 1 || menu > 5);
+
+		return menu;
+
+	}
+
 }
