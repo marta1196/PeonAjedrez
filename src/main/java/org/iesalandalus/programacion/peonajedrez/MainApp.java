@@ -56,4 +56,16 @@ public class MainApp {
 		return null;
 	}
 
+	private static char elegirColumnaInicial() {
+		char columna;
+
+		do {
+			System.out.println("¿cuál es su columna inicial?de la a hasta la h");
+			columna = Entrada.caracter();
+
+		} while (columna < 'a' || columna > 'h');
+
+		return columna;
+
+	}
 }
