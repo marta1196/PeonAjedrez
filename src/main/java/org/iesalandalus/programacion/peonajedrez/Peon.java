@@ -13,6 +13,16 @@ public class Peon {
 		setPosicion(new Posicion(7, 'd'));
 	}
 
+	public Peon(Color color) {
+		setColor(color);
+		if (color.equals(Color.BLANCO)) {
+			setPosicion(new Posicion(2, 'd'));
+		}
+		if (color.equals(Color.NEGRO)) {
+			setPosicion(new Posicion(7, 'd'));
+		}
+	}
+
 	public Color getColor() {
 		return color;
 	}
